@@ -34,7 +34,7 @@ const characters = [
 ]
 
 let coins = [200] 
-let name = []
+let name = ['esteban']
 
 module.exports = {
 
@@ -74,6 +74,12 @@ module.exports = {
         const {id} = req.params
         characters[id-1].defense += 1000 
         res.status(200).send(characters)
+    },
+    showCoins : (req,res) => {
+        res.status(200).send(coins)
+    },
+    users : (req,res) => {
+        res.status(200).send(name)
     }
 
 

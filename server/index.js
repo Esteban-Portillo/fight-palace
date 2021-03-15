@@ -8,6 +8,8 @@ app.use(express.json())
 
 app.get('/api/characters',controls.showCharacters)
 app.get('/api/characters/:id',controls.pickCharacter)
+app.get('/api/coins',controls.showCoins)
+app.get('/api/users',controls.users)
 // app.get('api/characters/random', controls.randomCharacter)
 app.put('/api/coins/up',controls.coinUp)
 app.put('/api/coins/down',controls.coinDown)

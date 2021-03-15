@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import Header from './components/Header'
 import Characters from './components/Characters'
+import Arena from './components/Arena'
 
 import './App.css';
 
@@ -12,7 +13,8 @@ class App extends Component {
       coins:'',
       usersName:[],
       characters:[],
-      choosedCharacter: {}
+      choosedCharacter: [],
+      randomCharacter:[]
     }
   }
   
@@ -48,6 +50,8 @@ class App extends Component {
   }
 
   choosingCharacter = (id) =>{
+    console.log(id)
+    console.log(this.state.characters)
     this.setState({choosedCharacter: this.state.characters[id-1]})
   }
   buyAttack =(id) => {
@@ -81,20 +85,33 @@ class App extends Component {
   }
 
 
+  randomChoise =(id) => {
+    this.setState({randomCharacter : this.state.characters[+id-1]})
+  }
+
 
 
   render(){
-    // console.log(this.state.usersName)
+    console.log(this.state.cho)
     return(
       <div>
+
         <Header 
           coins = {this.state.coins}
           usersName = {this.state.usersName}
           addUserName = {this.addUserName}/>
-        <Characters characters = {this.state.characters}
-        choosingCharacter = {this.choosingCharacter}
-        buyAttack = {this.buyAttack}
-        buyDefense = {this.buyDefense}/>
+
+        <Characters 
+          characters = {this.state.characters}
+          choosingCharacter = {this.choosingCharacter}
+          buyAttack = {this.buyAttack}
+          buyDefense = {this.buyDefense}/>
+
+        <Arena
+          choosedCharacter = {this.state.choosedCharacter}
+          characters = {this.state.characters}
+          randomCharacter = {this.state.randomCharacter}
+          randomChoise = {this.randomChoise}/>
       </div>
       
     )

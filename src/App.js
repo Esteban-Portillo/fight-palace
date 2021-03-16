@@ -89,12 +89,16 @@ class App extends Component {
     this.setState({randomCharacter : this.state.characters[+id-1]})
   }
 
-
+  coinsUp = () =>{
+    axios.put('/api/coins/up')
+     .then(res => this.setState({coins: res.data[0]}))
+     .catch( err => console.log(err));
+  }
 
   render(){
     console.log(this.state.cho)
     return(
-      <div>
+      <main>
 
         <Header 
           coins = {this.state.coins}
@@ -107,12 +111,13 @@ class App extends Component {
           buyAttack = {this.buyAttack}
           buyDefense = {this.buyDefense}/>
 
-        <Arena
+        <Arena 
           choosedCharacter = {this.state.choosedCharacter}
           characters = {this.state.characters}
           randomCharacter = {this.state.randomCharacter}
-          randomChoise = {this.randomChoise}/>
-      </div>
+          randomChoise = {this.randomChoise}
+          coinsUp = {this.coinsUp}/>
+      </main>
       
     )
   }

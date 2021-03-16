@@ -1,3 +1,35 @@
+*{
+  margin: 0;
+}
 img{
   width: 100px;
+}
+
+.header{
+  background-color: #28527a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 15vh;
+}
+
+.introduceName{
+  display: flex;
+  flex-direction: column;
+
+}
+.characters{
+  display: flex;
+  flex-direction: row ;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.figure{
+  
+  display: flex;
+  flex-direction: column;
+
 }

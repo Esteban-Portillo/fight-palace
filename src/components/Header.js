@@ -20,13 +20,20 @@ class Header extends Component{
 
     render(){
         return(
-            <header>
-                <h1>fight Palace</h1>
-                <label>Introduce your name</label> 
-                <input onChange = {(e)=>this.handleChange(e.target.value)}/>
+            <header className = 'header'>
+                <section className = 'introduceName'>
+                    
+                    <input onChange = {(e)=>this.handleChange(e.target.value)}/>
                 <button onClick = {this.handleClick}>Send your name </button>
-                <h1>{this.props.usersName[this.props.usersName.length-1]}</h1>
-                <h1>{this.props.coins}</h1>
+                </section>
+
+                <h1>FIGTH PALACE</h1>
+                
+                <section>
+                    <h1>{this.props.usersName[this.props.usersName.length-1]}</h1>
+                    <h1>{this.props.coins}</h1>
+                </section>
+                
             </header>
         )
     }

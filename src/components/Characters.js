@@ -10,7 +10,7 @@ class Characters extends Component{
                         src = {this.props.characters[i].imgUrl}
                         onClick={ (e) => this.props.choosingCharacter(e.target.name)}/>
 
-                        <p>{this.props.characters.name}</p>
+                        <p>{this.props.characters[i].name}</p>
                         <p> Attack: {this.props.characters[i].attack}</p>
 
                         <p> Defense: {this.props.characters[i].defense}</p>

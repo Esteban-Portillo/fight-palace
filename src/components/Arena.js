@@ -33,31 +33,33 @@ class Arena extends Component{
         return(
             
             
-            <section>
+            <section className="arena">
                 
-                <h1>This is the ARENA</h1>
-                <section>
-                    <p>this guy you choosed</p>
-                    <img src= {this.props.choosedCharacter.imgUrl}/>
-                    <p>Name {this.props.choosedCharacter.name}</p>
-                    <p>Attack: {this.props.choosedCharacter.attack}</p>
-                    <p>Defense: {this.props.choosedCharacter.defense}</p>
-                </section>
+                <button className='arena-button' onClick = {this.figth}>PRESS HERE TO FIGHT </button>
+                <main className ='fighters'>
+                    <section>
+                        <p>this guy you choosed</p>
+                        <img src= {this.props.choosedCharacter.imgUrl}/>
+                        <p>Name {this.props.choosedCharacter.name}</p>
+                        <p>Attack: {this.props.choosedCharacter.attack}</p>
+                        <p>Defense: {this.props.choosedCharacter.defense}</p>
+                    </section>
 
 
-                <p>VS</p>
+                    <p>VS</p>
+                    
+                    
+                    
+                    <section>
+                        <p>this other guy </p>
+                        <img src= {this.props.randomCharacter.imgUrl}/>
+                        <p>Name {this.props.randomCharacter.name}</p>
+                        <p>Attack: {this.props.randomCharacter.attack}</p>
+                        <p>Defense: {this.props.randomCharacter.defense}</p>
+                        <button onClick={this.randomChoiser}>Random Chooser</button>
+                    </section>
+                </main>
                 
-                
-                
-                <section>
-                    <p>this other guy </p>
-                    <img src= {this.props.randomCharacter.imgUrl}/>
-                    <p>Name {this.props.randomCharacter.name}</p>
-                    <p>Attack: {this.props.randomCharacter.attack}</p>
-                    <p>Defense: {this.props.randomCharacter.defense}</p>
-                    <button onClick={this.randomChoiser}>Random Chooser</button>
-                </section>
-                <button onClick = {this.figth}>FIGHT</button>
 
                 <h1>{this.state.winner}</h1>
                    

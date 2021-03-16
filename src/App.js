@@ -64,6 +64,7 @@ class App extends Component {
     axios.put('/api/coins/down')
       .then( res => this.setState({coins:res.data[0]}))
       .catch( err => console.log(err));
+      
     }
     else{
       alert('you don t have coins to buy')
@@ -78,6 +79,7 @@ class App extends Component {
       axios.put('/api/coins/down')
       .then( res => this.setState({coins:res.data[0]}))
       .catch( err => console.log(err));
+      
     }
     else{
       alert('you don t have coins')
@@ -93,6 +95,7 @@ class App extends Component {
     axios.put('/api/coins/up')
      .then(res => this.setState({coins: res.data[0]}))
      .catch( err => console.log(err));
+     
   }
 
   render(){

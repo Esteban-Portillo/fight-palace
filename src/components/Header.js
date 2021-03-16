@@ -24,14 +24,16 @@ class Header extends Component{
                 <section className = 'introduceName'>
                     
                     <input onChange = {(e)=>this.handleChange(e.target.value)}/>
-                <button onClick = {this.handleClick}>Send your name </button>
+                <button onClick = {this.handleClick}
+                className = 'button-name'
+                >Send your name </button>
                 </section>
 
-                <h1>FIGTH PALACE</h1>
+                <h1 className = 'title'>FIGTH PALACE</h1>
                 
                 <section>
-                    <h1>{this.props.usersName[this.props.usersName.length-1]}</h1>
-                    <h1>{this.props.coins}</h1>
+                    <h1>User Name {this.props.usersName[this.props.usersName.length-1]}</h1>
+                    <h1>Coins {this.props.coins}</h1>
                 </section>
                 
             </header>

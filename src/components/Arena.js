@@ -37,7 +37,7 @@ class Arena extends Component{
                 
                 <button className='arena-button' onClick = {this.figth}>PRESS HERE TO FIGHT </button>
                 <main className ='fighters'>
-                    <section>
+                    <section className = 'fighters-inside'>
                         <p>this guy you choosed</p>
                         <img src= {this.props.choosedCharacter.imgUrl}/>
                         <p>Name {this.props.choosedCharacter.name}</p>
@@ -46,11 +46,11 @@ class Arena extends Component{
                     </section>
 
 
-                    <p>VS</p>
+                    <p className = 'title'>VS</p>
                     
                     
                     
-                    <section>
+                    <section className = "fighters-inside">
                         <p>this other guy </p>
                         <img src= {this.props.randomCharacter.imgUrl}/>
                         <p>Name {this.props.randomCharacter.name}</p>

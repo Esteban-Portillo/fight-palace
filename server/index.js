@@ -15,8 +15,8 @@ app.put('/api/coins/up',controls.coinUp)
 app.put('/api/coins/down',controls.coinDown)
 app.put('/api/habilities/attack/:id',controls.attack)
 app.put('/api/habilities/defense/:id',controls.defense)
-
 app.post('/api/user/newName',controls.addName)
+app.delete('/api/characters/:id',controls.deletePlayer)
 
 
 const port = 4020

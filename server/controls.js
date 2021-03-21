@@ -80,7 +80,16 @@ module.exports = {
     },
     users : (req,res) => {
         res.status(200).send(name)
+    },
+
+    deletePlayer: (req,res) => {
+        const {id} = req.params
+        const index = characters.findIndex(e => e.id === +id )
+        characters.splice(index,1)
+        res.status(200).send(characters)
+
     }
+    
 
 
 

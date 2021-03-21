@@ -21,6 +21,12 @@ class Characters extends Component{
                         <button name = {this.props.characters[i].id} 
                         onClick = { (e) => this.props.buyDefense(+e.target.name)}>Buy Defense</button>
 
+
+                        <button name = {this.props.characters[i].id} 
+                        onClick = {(e) => this.props.deletePlayer(+e.target.name)}>Delete player</button>
+
+                        
+
                     </figure>
                 
             )

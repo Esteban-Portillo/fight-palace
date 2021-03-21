@@ -98,8 +98,15 @@ class App extends Component {
      
   }
 
+  deletePlayer = (id) => {
+    axios.delete(`/api/characters/${id}`)
+    .then(res => this.setState({characters : res.data}))
+    .catch( err => console.log(err))
+    
+  }
+
   render(){
-    console.log(this.state.cho)
+    // console.log(this.state.cho)
     return(
       <main>
 
@@ -112,14 +119,16 @@ class App extends Component {
           characters = {this.state.characters}
           choosingCharacter = {this.choosingCharacter}
           buyAttack = {this.buyAttack}
-          buyDefense = {this.buyDefense}/>
+          buyDefense = {this.buyDefense}
+          deletePlayer = {this.deletePlayer}/>
 
         <Arena 
           choosedCharacter = {this.state.choosedCharacter}
           characters = {this.state.characters}
           randomCharacter = {this.state.randomCharacter}
           randomChoise = {this.randomChoise}
-          coinsUp = {this.coinsUp}/>
+          coinsUp = {this.coinsUp}
+          />
       </main>
       
     )
